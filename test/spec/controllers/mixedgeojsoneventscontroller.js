@@ -1,23 +1,23 @@
 'use strict';
 
-describe('Controller: AboutCtrl', function () {
+describe('Controller: MixedgeojsoneventscontrollerCtrl', function () {
 
   // load the controller's module
   beforeEach(module('angularLeafletExampleApp'));
 
-  var AboutCtrl,
+  var MixedgeojsoneventscontrollerCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    AboutCtrl = $controller('AboutCtrl', {
+    MixedgeojsoneventscontrollerCtrl = $controller('MixedgeojsoneventscontrollerCtrl', {
       $scope: scope
       // place here mocked dependencies
     });
   }));
 
   it('should attach a list of awesomeThings to the scope', function () {
-    expect(AboutCtrl.awesomeThings.length).toBe(3);
+    expect(MixedgeojsoneventscontrollerCtrl.awesomeThings.length).toBe(3);
   });
 });

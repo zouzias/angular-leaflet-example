@@ -1,0 +1,11 @@
+<div ng-controller="MixedgeojsoneventscontrollerCtrl">
+<p>This is the GeoJsonView view.</p>
+<leaflet center="center" events="events" legend="legend" geojson="geojson" height="480px" width="100%"></leaflet>
+    <div class="worldmap country f32">
+      <div ng-show="selectedCountry" class="flag" ng-class="countries[selectedCountry.id]['alpha-2']|lowercase"></div>
+      {{ selectedCountry.properties.name || 'No country'}}
+    </div>
+    <div class="worldmap box">Map center: [ lat: {{ center.lat | number:4 }}, lng: {{ center.lng | number:4 }} ]</div>
+    <h1>World map flags example</h1>
+    <button ng-click="reload()">Reload view</button>
+  </div>

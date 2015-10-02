@@ -14,7 +14,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'leaflet-directive'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -22,6 +23,16 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
+      })
+      .when('/markers', {
+        templateUrl: 'views/simplemarkersexample.html',
+        controller: 'MarkerssimplecontrollerCtrl',
+        controllerAs: 'markers'
+      })
+      .when('/map', {
+        templateUrl: 'views/geojsonview.html',
+        controller: 'MixedgeojsoneventscontrollerCtrl',
+        controllerAs: 'mapcontroller'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
