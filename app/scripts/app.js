@@ -29,6 +29,11 @@ angular
         controller: 'MarkerssimplecontrollerCtrl',
         controllerAs: 'markers'
       })
+      .when('/map', {
+        templateUrl: 'views/geojsonview.html',
+        controller: 'MixedgeojsoneventscontrollerCtrl',
+        controllerAs: 'mapcontroller'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
