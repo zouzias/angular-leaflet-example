@@ -39,7 +39,7 @@ angular.module('angularLeafletExampleApp')
                     "142": {
                             name: 'Asia',
                             colors: [ '#FFCC00', '#CC9933', '#999900', '#FFCC33', '#FFCC66' ]
-                    },
+                    }
             };
 
             angular.extend($scope, {
@@ -54,7 +54,7 @@ angular.module('angularLeafletExampleApp')
                 }
             });
 
-            function countryClick(country, event) {
+            function countryClick(country) {
                 country = country.feature;
                 console.log(country.properties.name);
             }
@@ -95,7 +95,7 @@ angular.module('angularLeafletExampleApp')
             }
 
             // Get the countries data from a JSON
-            $http.get("json/all.json").success(function(data, status) {
+            $http.get("json/all.json").success(function(data) {
 
                 // Put the countries on an associative array
                 $scope.countries = {};
@@ -105,7 +105,7 @@ angular.module('angularLeafletExampleApp')
                 }
 
                 // Get the countries geojson data from a JSON
-                $http.get("json/countries.geo.json").success(function(data, status) {
+                $http.get("json/countries.geo.json").success(function(data) {
                     angular.extend($scope, {
                         geojson: {
                             data: data,

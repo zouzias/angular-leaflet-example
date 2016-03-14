@@ -39,6 +39,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/geojsonio', {
+        templateUrl: 'views/geojsonio.html',
+        controller: 'GeojsonioCtrl',
+        controllerAs: 'geojsonio'
+      })
       .otherwise({
         redirectTo: '/'
       });

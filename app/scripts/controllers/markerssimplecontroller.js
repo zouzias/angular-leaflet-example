@@ -25,7 +25,7 @@ angular.module('angularLeafletExampleApp')
                  m1: {
                      lat: 51.505,
                      lng: -0.09,
-                     message: "I'm a static marker",
+                     message: "I'm a static marker"
                  },
                  m2: {
                      lat: 51,
@@ -40,7 +40,7 @@ angular.module('angularLeafletExampleApp')
 
      $scope.removeMarkers = function() {
          $scope.markers = {};
-     }
+     };
 
      $scope.addMarkers();
 
