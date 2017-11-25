@@ -17,7 +17,11 @@ angular
     'ngTouch',
     'leaflet-directive'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
+
+    // See https://stackoverflow.com/questions/24814472/angularjs-converting-my-ng-href-url-slash-into-2f
+    $locationProvider.hashPrefix('');
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
