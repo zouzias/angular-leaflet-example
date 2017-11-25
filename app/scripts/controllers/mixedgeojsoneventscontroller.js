@@ -95,7 +95,7 @@ angular.module('angularLeafletExampleApp')
             }
 
             // Get the countries data from a JSON
-            $http.get("json/all.json").success(function(data) {
+            $http.get("json/all.json").then(function(data) {
 
                 // Put the countries on an associative array
                 $scope.countries = {};
@@ -105,7 +105,7 @@ angular.module('angularLeafletExampleApp')
                 }
 
                 // Get the countries geojson data from a JSON
-                $http.get("json/countries.geo.json").success(function(data) {
+                $http.get("json/countries.geo.json").then(function(data) {
                     angular.extend($scope, {
                         geojson: {
                             data: data,
