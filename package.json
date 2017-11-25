@@ -35,5 +35,9 @@
   },
   "scripts": {
     "test": "grunt test"
+  },
+  "dependencies": {
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1"
   }
 }
