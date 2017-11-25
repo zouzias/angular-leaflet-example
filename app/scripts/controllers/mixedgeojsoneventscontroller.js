@@ -105,10 +105,10 @@ angular.module('angularLeafletExampleApp')
                 }
 
                 // Get the countries geojson data from a JSON
-                $http.get("json/countries.geo.json").then(function(data) {
+                $http.get("json/countries.geo.json").then(function(dt) {
                     angular.extend($scope, {
                         geojson: {
-                            data: data,
+                            data: dt,
                             style: style,
                             resetStyleOnMouseout: true
                         },

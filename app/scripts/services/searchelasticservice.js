@@ -17,7 +17,7 @@ angular.module('angularLeafletExampleApp')
       // Prepare prefix query
       var prefix = {};
       prefix[fieldName] = searchQuery;
-      var prefix = { prefix: prefix };
+      prefix = { prefix: prefix };
       if (searchQuery === '') {
         prefix = { match_all: {} };
       }
@@ -37,12 +37,11 @@ angular.module('angularLeafletExampleApp')
       console.dir(esQuery);
 
 
-      var promise = elasticClient.search({
+      return elasticClient.search({
         index: indexName,
         type: indexName + '_type',
         body: esQuery
       });
-      return promise;
     };
 
     return factory;
